@@ -1,0 +1,11 @@
+__pycache__
+*.log
+*.csv
+*.json
+.git
+data/data_for_training.csv
+train_model.py
+model/banglore_home_prices_model.pickle
+model/house-price-prediction.ipynb
+README.md
+
