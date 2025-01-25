@@ -7,6 +7,11 @@ spec:
     app: homeprice
   ports:
   - protocol: TCP
-    port: 9090
-    targetPort: 9090
+    port: 80  # Frontend port
+    targetPort: 80  # Exposing the frontend port
+    nodePort: 30080  # External port for frontend
+  - protocol: TCP
+    port: 5000  # Backend port
+    targetPort: 5000  # Exposing the backend port
+    nodePort: 30000  # External port for backend
   type: NodePort
