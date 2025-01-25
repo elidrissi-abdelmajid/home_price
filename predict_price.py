@@ -4,10 +4,10 @@ from fastapi.middleware.cors import CORSMiddleware
 import numpy as np
 import json
 import joblib 
-with open("columns.json", "r") as f:
+with open("data/columns.json", "r") as f:
     data_columns = json.load(f)["data_columns"]
 
-model = joblib.load("model.pickle")
+model = joblib.load("model/model.pickle")
 app = FastAPI()
 
 # Allow CORS for frontend-backend communication
