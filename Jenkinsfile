@@ -16,7 +16,7 @@ pipeline{
         stage("build the image"){
             steps{
                 script{
-                    bat "docker build -t ${DOCKER_IMAGE}:${TAG} ."
+                    bat "docker build -t ${DOCKER_USER}/${DOCKER_IMAGE}:${TAG} ."
                 }
             }
         }
