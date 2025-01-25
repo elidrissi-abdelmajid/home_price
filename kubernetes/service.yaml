@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: home_price-service
+  name: homeprice-service
 spec:
   selector:
-    app: home_price
+    app: homeprice
   ports:
   - protocol: TCP
     port: 9090
