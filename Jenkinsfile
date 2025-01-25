@@ -3,7 +3,8 @@ pipeline{
     environment{
         DOCKER_IMAGE="home_price"
         TAG="v1"
-       
+        DOCKER_USER=""
+        DOCKER_KEY=""        
     }
     stages{
         stage("clone the project"){
