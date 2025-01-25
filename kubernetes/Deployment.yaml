@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: home_price-deployment
+  name: homeprice-deployment
   labels:
-    app: home_price
+    app: homeprice
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: home_price
+      app: homeprice
   template:
     metadata:
       labels:
-        app: home_price
+        app: homeprice
     spec:
       containers:
-      - name: home_price-container
+      - name: homeprice-container
         image: mjid6/home_price:v1
         ports:
         - containerPort: 9090
