@@ -1,0 +1,228 @@
+input {
+    caret-color: red;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #ecf0f3;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    place-items: center;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 350px;
+    height: 650px;
+    border-radius: 20px;
+    padding: 2px 20px 2px 20px;
+    box-sizing: border-box;
+    background: #ecf0f3;
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+
+.brand-logo {
+    height: 100px;
+    width: 100px;
+    background: url("https://img.icons8.com/color/100/000000/twitter--v2.png");
+    margin: auto;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+}
+
+.brand-title {
+    margin-top: 10px;
+    font-weight: 100;
+    font-size: 1.8rem;
+    color: #1DA1F2;
+    letter-spacing: 1px;
+}
+
+h5 {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #333;
+    margin-top: 20px;
+}
+
+.inputs {
+    text-align: left;
+    margin-top: 50px;
+}
+
+label, input, button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+label {
+    margin-bottom: 4px;
+}
+
+input::placeholder {
+    color: gray;
+}
+
+input {
+    background: #ecf0f3;
+    padding: 10px;
+    padding-left: 20px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 10px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+button {
+    color: white;
+    margin-top: 20px;
+    background: #1DA1F2;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+    transition: 0.5s;
+}
+
+button:hover {
+    box-shadow: none;
+}
+
+.switch-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* space between each radio button */
+}
+
+.switch-field input {
+    margin-right: 5px; /* space between radio button and label */
+}
+
+.switch-field label {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.switch-field .radio-item {
+    display: flex;
+    align-items: center;
+}
+
+.switch-field input[type="radio"] {
+    margin-right: 5px;
+}
+
+a {
+    position: absolute;
+    font-size: 8px;
+    bottom: 4px;
+    right: 4px;
+    text-decoration: none;
+    color: black;
+    background: yellow;
+    border-radius: 10px;
+    padding: 2px;
+}
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    background: #ecf0f3;
+    color: gray;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+    appearance: none; /* Remove default dropdown arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+    box-shadow: inset 4px 4px 6px #cbced1, inset -4px -4px 6px white;
+}
+
+select option {
+    font-size: 16px;
+    color: black;
+    font-family: "Poppins", sans-serif;
+}
+
+.location {
+    position: relative;
+}
+
+.location:after {
+    content: '\25BC'; /* Unicode for down arrow */
+    font-size: 14px;
+    color: gray;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+.radio-group {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px; /* Add space between buttons */
+    margin-top: 10px; /* Add spacing below heading */
+}
+
+.radio-group input[type="radio"] {
+    display: none; /* Hide default radio button */
+}
+
+.radio-group label {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #1DA1F2; /* Border for unselected */
+    border-radius: 50%; /* Circle shape */
+    font-size: 16px;
+    font-weight: bold;
+    color: #1DA1F2; /* Text color */
+    cursor: pointer;
+    transition: 0.3s; /* Smooth transition */
+    background: #ecf0f3;
+    box-shadow: 4px 4px 6px #cbced1, -4px -4px 6px white;
+}
+
+.radio-group input[type="radio"]:checked + label {
+    background: #1DA1F2; /* Selected background */
+    color: #fff; /* Text color for selected */
+    box-shadow: inset 4px 4px 6px #166ab5, inset -4px -4px 6px #5ec7f5;
+}
+
+h6 {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.description {
+    font-size: 14px;
+    color: #555;
+    margin-top: -5px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-style: italic; /* Adds a nice touch for descriptions */
+}
