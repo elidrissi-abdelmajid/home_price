@@ -1,10 +1,13 @@
-# Use the official Nginx image
+# Use an official Nginx image from Docker Hub
 FROM nginx:alpine
 
-# Set the working directory inside the container (Nginx serves files from /usr/share/nginx/html by default)
-WORKDIR /usr/share/nginx/html
+# Copy your HTML, CSS, and JS files into the Nginx container
+COPY index.html /usr/share/nginx/html/index.html
+COPY style.css /usr/share/nginx/html/style.css
+COPY script.js /usr/share/nginx/html/script.js
 
-# Copy all frontend files (index.html, style.css, script.js) into the Nginx HTML directory
-COPY . .
+# Expose the port the app will run on
+EXPOSE 8080
 
-EXPOSE 5000
+# Command to run the Nginx server (already runs by default)
+CMD ["nginx", "-g", "daemon off;"]
