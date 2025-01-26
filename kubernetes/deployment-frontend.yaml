@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: homeprice-frontend-container
-          image: mjid6/homeprice-frontend:v1
+          image: mjid6/home_price_front:v1
           ports:
             - containerPort: 5000
