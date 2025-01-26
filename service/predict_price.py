@@ -13,14 +13,14 @@ app = FastAPI()
 # Allow CORS for frontend-backend communication
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Update this to restrict origins in production
+    allow_origins=["*"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 
-# Data model for prediction endpoint
+
 class HouseDetails(BaseModel):
     total_sqft: float
     bath: int
@@ -30,7 +30,7 @@ class HouseDetails(BaseModel):
 # Endpoint for price prediction
 @app.post("/predict_price")
 def predict_price(data: HouseDetails):
-    # Prepare input array
+   
     x = np.zeros(len(data_columns))
     x[0] = data.total_sqft
     x[1] = data.bath
@@ -41,6 +41,6 @@ def predict_price(data: HouseDetails):
     except ValueError:
         pass  # If location not found, keep as zero
 
-    # Predict price using the model
+    
     predicted_price = model.predict([x])[0]
     return {"estimated_price": round(predicted_price, 2)}

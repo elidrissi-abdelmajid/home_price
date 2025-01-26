@@ -6,9 +6,9 @@ spec:
   selector:
     app: homeprice
   ports:
-  - name: api  # Added name for backend port
+  - name: api  
     protocol: TCP
-    port: 9090  # Backend port
-    targetPort: 9090  # Exposing the backend port
-    nodePort: 30000  # External port for backend
+    port: 9090 
+    targetPort: 9090  
+    nodePort: 30000  
   type: NodePort

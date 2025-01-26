@@ -5,7 +5,7 @@ metadata:
   labels:
     app: homeprice
 spec:
-  replicas: 2  # You can adjust based on your load
+  replicas: 2  
   selector:
     matchLabels:
       app: homeprice
@@ -18,4 +18,4 @@ spec:
       - name: homeprice-container
         image: mjid6/home_price:v1
         ports:
-        - containerPort: 9090  # Backend 
+        - containerPort: 9090  
