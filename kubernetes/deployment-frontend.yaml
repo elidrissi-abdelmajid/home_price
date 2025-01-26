@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: homeprice-frontend-deployment
+  labels:
+    app: homeprice-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: homeprice-frontend
+  template:
+    metadata:
+      labels:
+        app: homeprice-frontend
+    spec:
+      containers:
+        - name: homeprice-frontend-container
+          image: mjid6/homeprice-frontend:v1
+          ports:
+            - containerPort: 5000

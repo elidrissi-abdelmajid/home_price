@@ -1,0 +1,10 @@
+# Use the official Nginx image
+FROM nginx:alpine
+
+# Set the working directory inside the container (Nginx serves files from /usr/share/nginx/html by default)
+WORKDIR /usr/share/nginx/html
+
+# Copy all frontend files (index.html, style.css, script.js) into the Nginx HTML directory
+COPY . .
+
+EXPOSE 5000
