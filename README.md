@@ -18,13 +18,13 @@ The SmartHome Price Predictor is a complete end-to-end project that predicts hou
 
   Features used:
   
-      Area
+    Area
       
-      BHK
+    BHK
       
-      Number of bedrooms
+    Number of bedrooms
       
-      Location
+    Location
       
   Model: Linear Regression
   
@@ -68,11 +68,11 @@ Jenkins
 
 **Clone the repository:**
 
-   git clone https://github.com/elidrissi-abdelmajid/home_price  
-   
-   cd home_price  
-  
-   uvicorn home_price:app --reload
+     git clone https://github.com/elidrissi-abdelmajid/home_price  
+     
+     cd home_price  
+    
+     uvicorn home_price:app --reload
 
 # Technologies Used
 
