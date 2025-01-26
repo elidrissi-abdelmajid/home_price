@@ -18,5 +18,4 @@ spec:
       - name: homeprice-container
         image: mjid6/home_price:v1
         ports:
-        - containerPort: 80  # Frontend (nginx)
-        - containerPort: 5000  # Backend (Flask or FastAPI)
+        - containerPort: 9090  # Backend 

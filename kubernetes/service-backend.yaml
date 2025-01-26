@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: homeprice-service
+spec:
+  selector:
+    app: homeprice
+  ports:
+  - name: api  # Added name for backend port
+    protocol: TCP
+    port: 9090  # Backend port
+    targetPort: 9090  # Exposing the backend port
+    nodePort: 30000  # External port for backend
+  type: NodePort
