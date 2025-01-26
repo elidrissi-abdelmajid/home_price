@@ -3,8 +3,7 @@
 
 # demo 
 
-
-
+https://github.com/user-attachments/assets/1b41363f-e521-4b66-abd5-59b5951d299a
 
 
 The SmartHome Price Predictor is a complete end-to-end project that predicts house prices based on user-provided details such as area, BHK, number of bedrooms, and location. This project demonstrates the use of machine learning, backend and frontend development, and modern CI/CD practices to create a scalable and user-friendly web application.
